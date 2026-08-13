@@ -4,7 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karinderyas Near TUP</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 35px 20px;
+            background-color: #fff8f0;
+            color: #333;
+        }
+
+        /* Main title */
+        h1 {
+            text-align: center;
+            font-size: 52px;
+            color: #8b4513;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px #f1c27d;
+        }
+
+        body > p {
+            text-align: center;
+            font-size: 17px;
+            color: #777;
+            margin-bottom: 35px;
+        }
+
+        /* About Me */
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            background-color: #ffffff;
+            padding: 25px;
+            border: 2px solid #e8c9a8;
+            border-radius: 18px;
+            margin-bottom: 45px;
+            box-shadow: 0 4px 10px rgba(139, 69, 19, 0.08);
+        }
+
+        section div {
+            flex: 1;
+        }
+
+        section h2 {
+            color: #8b4513;
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        section p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        section img {
+            width: 140px;
+            height: 140px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        /* Places heading */
+        body > h2 {
+            text-align: center;
+            font-size: 38px;
+            color: #8b4513;
+            margin-bottom: 35px;
+            text-decoration: underline;
+            text-decoration-color: #f1b24a;
+            text-decoration-thickness: 5px;
+            text-underline-offset: 8px;
+        }
+
+        /* Places layout */
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        /* All three cards have the same highlight */
+        article {
+            width: 390px;
+            padding: 22px;
+            box-sizing: border-box;
+            background-color: #fffdf7;
+            border: 3px solid #e8a317;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 5px 14px rgba(139, 69, 19, 0.12);
+            transition: transform 0.2s;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+        }
+
+        article h3 {
+            color: #8b4513;
+            font-size: 25px;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        /* Small category subtitle */
+        article p:first-of-type {
+            color: #b5651d;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Description */
+        article p:nth-of-type(2) {
+            color: #666;
+            line-height: 1.6;
+            min-height: 105px;
+            margin-bottom: 10px;
+        }
+
+        article img {
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+            margin-top: 10px;
+            border-radius: 12px;
+            background-color: #fffaf5;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            section img {
+                width: 125px;
+                height: 125px;
+            }
+
+            article {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <h1>Karinderyas Near TUP</h1>
@@ -12,15 +167,58 @@
     <p>Affordable and delicious meals near TUP for students on a budget.</p>
 
     <section>
-        <h2>Lyn-Lyn Layague</h2>
+        <div>
+            <h2>Lyn-Lyn Layague</h2>
 
-        <p>
-            I am a student who enjoys finding affordable and delicious meals near TUP.
-            I created this guide to share budget-friendly food spots with fellow students.
-        </p>
+            <p>
+                I am a student who enjoys finding affordable and delicious meals near TUP.
+                I created this guide to share budget-friendly food spots with fellow students.
+            </p>
+        </div>
 
         <img src="picture.jpg" alt="Cartoon character enjoying a meal">
     </section>
+
+    <h2>My Top Picks</h2>
+
+    <div class="places">
+
+        <article>
+            <h3>Daddy's Sisig House</h3>
+            <p>Budget-Friendly Meals</p>
+            <p>
+                Daddy's Sisig House offers delicious and affordable ulam,
+                especially their famous sisig. They also have different
+                choices such as chicken teriyaki, Bicol Express, and other
+                flavorful chicken dishes with different sauces.
+            </p>
+            <img src="daddys-sisig-house.jpg" alt="Food from Daddy's Sisig House">
+        </article>
+
+        <article>
+            <h3>Chris Carinderia</h3>
+            <p>Affordable Filipino Food</p>
+            <p>
+                Chris Carinderia has many different ulam to choose from,
+                including vegetables and other tasty dishes. The place also
+                has a comfortable and organized dining area, while keeping
+                the food affordable for students.
+            </p>
+            <img src="chris-carinderia.jpg" alt="Food from Chris Carinderia">
+        </article>
+
+        <article>
+            <h3>T&J Eatery</h3>
+            <p>Student-Friendly Eatery</p>
+            <p>
+                T&J Eatery is a good option for students who want a tasty
+                and affordable meal. With flavorful ulam and filling servings,
+                it is a convenient choice for a quick and satisfying meal.
+            </p>
+            <img src="tj-eatery.jpg" alt="Food from T&J Eatery">
+        </article>
+
+    </div>
 
 </body>
 </html>
