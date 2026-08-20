@@ -24,7 +24,7 @@
             text-shadow: 2px 2px #f1c27d;
         }
 
-        body > p {
+        header > p {
             text-align: center;
             font-size: 17px;
             color: #777;
@@ -68,7 +68,7 @@
         }
 
         /* Places heading */
-        body > h2 {
+        main > h2 {
             text-align: center;
             font-size: 38px;
             color: #8b4513;
@@ -157,27 +157,62 @@
                 font-size: 40px;
             }
         }
+
+        header {
+            text-align: center;
+        }
+
+        nav {
+            margin-bottom: 25px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 12px;
+        }
+
+        nav a {
+            color: #8b4513;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+
     </style>
 </head>
 
 <body>
 
-    <h1>Karinderyas Near TUP</h1>
+    <header>
+        <h1>Karinderyas Near TUP</h1>
 
-    <p>Affordable and delicious meals near TUP for students on a budget.</p>
+                <p>Affordable and delicious meals near TUP for students on a budget.</p>
 
-    <section>
-        <div>
-            <h2>Lyn-Lyn Layague</h2>
+        <nav>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <p>
-                I am a student who enjoys finding affordable and delicious meals near TUP.
-                I created this guide to share budget-friendly food spots with fellow students.
-            </p>
-        </div>
-
-        <img src="picture.jpg" alt="Cartoon character enjoying a meal">
-    </section>
+    <main>
 
     <h2>My Top Picks</h2>
 
@@ -219,6 +254,12 @@
         </article>
 
     </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Karinderyas Near TUP</p>
+</footer>
 
 </body>
 </html>
