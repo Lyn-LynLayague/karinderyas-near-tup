@@ -84,6 +84,58 @@
             margin-top: 40px;
             color: #777;
         }
+
+        form {
+          max-width: 450px;
+          margin: 18px auto;
+        }
+
+        fieldset {
+          padding: 25px;
+          border: 2px solid #ddd;
+          border-radius: 10px;
+          background-color: #fff;
+        }
+
+        legend {
+          font-size: 1.3rem;
+          font-weight: bold;
+          padding: 0 10px;
+        }
+
+        form p {
+          margin-bottom: 20px;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+          width: 100%;
+          padding: 8px;
+          box-sizing: border-box;
+          border: 1px solid #bbb;
+          border-radius: 6px;
+          font-size: 0.9rem;
+        }
+
+        textarea {
+          resize: vertical;
+        }
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 6px;
+          font-size: 1rem;
+          cursor: pointer;
+        }
+
     </style>
 </head>
 
@@ -115,7 +167,42 @@
             <li>Facebook: Karinderyas Near TUP</li>
         </ul>
 
+        <form id="demo">
+          <fieldset>
+            <legend>Your details</legend>
+            <p>
+              <label for="nm">Name</label><br>
+              <input type="text" id="nm" name="nm" required>
+            </p>
+            <p>
+              <label for="em">Email</label><br>
+              <input type="email" id="em" name="em" required>
+            </p>
+
+
+            <p>
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="">Select an option</option>
+                <option value="suggest-place">Suggest a place</option>
+                <option value="correct-detail">Correct a detail</option>
+                <option value="question">Ask a question</option>
+                <option value="feedback">Give feedback</option>
+                <option value="other">Something else</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </p>
+
+            <button type="submit">Send message</button>
+         </fieldset>
+        </form>
+
     </main>
+
 
     <footer>
         <p>&copy; 2026 Karinderyas Near TUP</p>
