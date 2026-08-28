@@ -107,6 +107,92 @@
                 margin: 0 8px;
             }
         }
+        
+        section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0d5bf;
+        }
+
+        section h2 {
+            color: #8b4513;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form > label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        fieldset {
+            border: 2px solid #e0bfa5;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            background-color: #fffaf5;
+        }
+
+        legend {
+            color: #8b4513;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        fieldset label {
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            padding: 10px;
+            border: 1px solid #d8b9a0;
+            border-radius: 8px;
+            margin-left: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .email-field {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .email-field label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .email-field input[type="email"] {
+            margin: 0;
+            width: 300px;
+        }
+
+        button[type="submit"] {
+            background-color: #8b4513;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #a0522d;
+        }
+
     </style>
 </head>
 
@@ -176,6 +262,50 @@
                 <td>Students looking for affordable meals</td>
             </tr>
         </table>
+
+                <section>
+            <h2>Suggest a Place</h2>
+
+            <form>
+
+                    <label for="place-name">Place Name:</label>
+                    <input type="text" id="place-name" name="place-name" required>
+
+                     <fieldset>
+                         <legend>Category</legend>
+
+                         <input type="radio" id="karinderya" name="category" value="karinderya">
+                         <label for="karinderya">Karinderya</label>
+
+                         <input type="radio" id="small-restaurant" name="category" value="small-restaurant">
+                         <label for="small-restaurant">Small Restaurant</label>
+
+                         <input type="radio" id="food-stall" name="category" value="food-stall">
+                         <label for="food-stall">Food Stall</label>
+                    </fieldset>
+
+                    <fieldset>
+                         <legend>What's Good About It</legend>
+
+                         <input type="checkbox" id="good-food" name="good-points" value="good-food">
+                         <label for="good-food">Good Food</label>
+
+                         <input type="checkbox" id="clean" name="good-points" value="clean">
+                         <label for="clean">Clean</label>
+
+                         <input type="checkbox" id="affordable" name="good-points" value="affordable">
+                         <label for="affordable">Affordable</label>
+                    </fieldset>
+
+                    <div class="email-field">
+                        <label for="email">Contact Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <button type="submit">Suggest Place</button>
+
+            </form>
+        </section>
 
     </main>
 
