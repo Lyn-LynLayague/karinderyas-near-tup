@@ -157,14 +157,14 @@ main section img {
 }
 
 /* 4. COMPONENTS — PLACE CARDS */
-.places {
+.place-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 24px;
 }
 
-main:has(.places) {
+main:has(.place-grid) {
     background-color: transparent;
     padding: 0;
     border: none;
@@ -172,7 +172,7 @@ main:has(.places) {
 }
 
 .place-card {
-    width: 390px;
+    flex: 1 1 240px;
     padding: 22px;
     background-color: var(--card-background);
     border: 3px solid #a65f2a;
@@ -181,7 +181,6 @@ main:has(.places) {
     box-shadow: 0 5px 14px rgba(139, 69, 19, 0.12);
     transition: transform 0.2s;
     border-left: 6px solid var(--brand-color);
-    margin-bottom: 25px;
 }
 
 .place-card:hover {
