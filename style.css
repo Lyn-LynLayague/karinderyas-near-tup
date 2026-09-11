@@ -26,22 +26,28 @@ body {
     font-family: Arial, sans-serif;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 35px 20px;
+    padding: 0 20px;
     background-color: var(--light-background);
     color: var(--dark-ink);
     line-height: 1.5;
 }
 
 /* 3. LAYOUT REGIONS */
-header {
-    text-align: center;
-    
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 0 40px;
+    background-color: #f3d2b3;
 }
 
 h1 {
     text-align: center;
     font-size: 52px;
     color: var(--brand-color);
+    margin-top: 0;
     margin-bottom: 8px;
     text-shadow: 2px 2px #f1c27d;
 }
@@ -62,6 +68,13 @@ main > h2 {
     text-decoration-color: var(--accent-color);
     text-decoration-thickness: 5px;
     text-underline-offset: 8px;
+}
+
+.heading-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
 }
 
 /* Home page section */
@@ -212,14 +225,15 @@ nav {
 }
 
 nav ul {
+    display: flex;
+    gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 nav li {
-    display: inline-block;
-    margin: 0 12px;
+    margin: 0;
 }
 
 nav a {
