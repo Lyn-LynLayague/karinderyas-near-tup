@@ -30,16 +30,18 @@ body {
     background-color: var(--light-background);
     color: var(--dark-ink);
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 /* 3. LAYOUT REGIONS */
 .page {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "masthead masthead"
-        "side     main"
-        "foot     foot";
+        "masthead"
+        "main"
+        "side"
+        "foot";
     gap: 16px;
 }
 
@@ -50,7 +52,7 @@ header {
 aside {
     grid-area: side;
     position: relative;
-    left: calc((1000px - 100vw) / 2 + 20px);
+    left: 0;
 }
 
 main {
@@ -73,7 +75,7 @@ footer {
 
 h1 {
     text-align: center;
-    font-size: 52px;
+    font-size: 40px;
     color: var(--brand-color);
     margin-top: 0;
     margin-bottom: 8px;
@@ -108,6 +110,7 @@ main > h2 {
 /* Home page section */
 body > section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 25px;
@@ -117,6 +120,7 @@ body > section {
     border-radius: 18px;
     margin-bottom: 45px;
     box-shadow: 0 4px 10px rgba(139, 69, 19, 0.08);
+    text-align: center;
 }
 
 body > section div {
@@ -135,8 +139,8 @@ body > section p {
 }
 
 body > section img {
-    width: 140px;
-    height: 140px;
+    width: 125px;
+    height: 125px;
     object-fit: contain;
     border-radius: 12px;
 }
@@ -253,6 +257,7 @@ nav {
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     list-style: none;
     padding: 0;
@@ -547,22 +552,21 @@ body:has(.place-image) button[type="submit"]:hover {
 }
 
 /* 7. RESPONSIVE */
-@media (max-width: 700px) {
-    body > section {
-        flex-direction: column;
-        text-align: center;
+
+@media (min-width: 700px) {
+    .page {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side     main"
+            "foot     foot";
     }
 
-    body > section img {
-        width: 125px;
-        height: 125px;
-    }
-
-    article {
-        width: 100%;
+    aside {
+        left: calc((1000px - 100vw) / 2 + 20px);
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 52px;
     }
 }
