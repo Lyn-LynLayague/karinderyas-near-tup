@@ -33,6 +33,34 @@ body {
 }
 
 /* 3. LAYOUT REGIONS */
+.page {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+        "masthead masthead"
+        "side     main"
+        "foot     foot";
+    gap: 16px;
+}
+
+header {
+    grid-area: masthead;
+}
+
+aside {
+    grid-area: side;
+    position: relative;
+    left: calc((1000px - 100vw) / 2 + 20px);
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: foot;
+}
+
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -252,6 +280,29 @@ footer {
     color: var(--muted-grey);
 }
 
+aside {
+    background-color: var(--white);
+    padding: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(139, 69, 19, 0.08);
+}
+
+aside h2 {
+    color: var(--brand-color);
+    font-size: 22px;
+    margin-top: 0;
+}
+
+aside ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+aside li {
+    color: var(--description-color);
+}
+
 /* CONTACT PAGE */
 main > p {
     text-align: center;
@@ -328,7 +379,7 @@ button {
 /* DETAIL PAGE */
 body:has(.place-image) {
     max-width: none;
-    padding: 0;
+    padding: 0 20px;
 }
 
 body:has(.place-image) header {
@@ -358,6 +409,10 @@ body:has(.place-image) main {
     max-width: 900px;
     margin: 40px auto;
     padding: 30px;
+}
+
+body:has(.place-image) aside {
+    left: 0;
 }
 
 .place-image {
